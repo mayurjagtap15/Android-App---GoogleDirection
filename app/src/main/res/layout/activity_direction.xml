@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p1"
+    tools:context=".Direction">
+
+
+ <!--   <TextView
+        android:id="@+id/txtlbl"
+        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Know your Distance"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:textColor="@color/colorAccent"
+        />-->
+
+    <TextView
+         android:id="@+id/txtsource"
+        android:fontFamily="serif"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Source"
+         android:textSize="20sp"
+         android:textColor="@color/colorPrimaryDark"
+         android:textStyle="bold"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="50dp"
+         />
+
+    <EditText
+        android:id="@+id/edtsrc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="serif"
+        android:nextFocusDown="@id/edtdest"
+        android:hint="Enter the Source"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtsource"
+        />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:fontFamily="serif"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edtsrc"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/txtdest"
+        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/arrow"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/edtdest"
+        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:nextFocusDown="@drawable/btn2"
+        android:hint="Enter the Destination"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtdest"
+        />
+
+   <!-- <TextView
+        android:id="@+id/txtmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode"
+        android:textSize="15sp"
+        android:layout_below="@+id/edtdest"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlue"
+-->
+        />
+    <!--<RadioButton
+        android:id="@+id/rddrving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driving"
+        android:textColor="@color/colorBlue"
+        android:layout_below="@+id/edtdest"
+        android:layout_alignBaseline="@+id/txtmode"
+        android:layout_marginLeft="90dp"
+        />
+
+    <RadioButton
+        android:id="@+id/rdwalking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Walking"
+        android:textColor="@color/colorBlue"
+        android:textSize="15sp"
+        android:layout_below="@+id/edtdest"
+        android:layout_alignBaseline="@+id/txtmode"
+        android:layout_marginLeft="200dp"
+
+        />
+-->
+    <Button
+        android:id="@+id/btnserach"
+        android:onClick="OnSearchClick"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="search"
+        android:textStyle="bold"
+        android:background="@drawable/btn2"
+        android:textColor="@color/colorBlue"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edtdest"
+        />
+
+    <TextView
+        android:id="@+id/txtdriving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Driving"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:fontFamily="serif"
+        android:textColor="@color/colorPink"
+        android:layout_below="@id/btnserach"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/dist"
+        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance"
+        android:paddingLeft="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorOrange"
+        android:layout_below="@+id/btnserach"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:paddingLeft="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorOrange"
+        android:layout_below="@+id/dist"
+        android:layout_marginTop="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edtsrc"
+        />
+
+
+
+
+</RelativeLayout>
